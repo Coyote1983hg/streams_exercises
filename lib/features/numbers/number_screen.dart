@@ -15,8 +15,24 @@ class NumberScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Number Screen'),
       ),
-      body: const Center(
-        child: Text("Hier sollen die Zahlen stehen"),
+      body: Center(
+        child: StreamBuilder<int>(
+          stream: numberRepository.getNumberStream(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const CircularProgressIndicator();
+            } else if (snapshot.hasError) {
+              return Text('Error: ${snapshot.error}');
+            } else if (snapshot.hasData) {
+              return Text(
+                'Number: ${snapshot.data}',
+                style: Theme.of(context).textTheme.headlineMedium,
+              );
+            } else {
+              return const Text('No data');
+            }
+          },
+        ),
       ),
     );
   }
