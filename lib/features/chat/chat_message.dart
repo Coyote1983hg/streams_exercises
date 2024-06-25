@@ -6,10 +6,10 @@ class ChatMessage {
 }
 
 List<ChatMessage> mockMessages = [
-  ChatMessage(user: "Alice", message: "Hallo, wie geht's?"),
-  ChatMessage(user: "Bob", message: "Mir geht's gut, und dir?"),
-  ChatMessage(user: "Alice", message: "Auch gut, danke!"),
-  ChatMessage(user: "Bob", message: "Schön, das zu hören!"),
-  ChatMessage(user: "Alice", message: "Ja, nicht wahr?"),
-  ChatMessage(user: "Bob", message: "Ja, das ist es!"),
+  ChatMessage(user: "Devil", message: "Hallo, wie geht's?"),
+  ChatMessage(user: "Angel", message: "Mir geht's gut, und dir?"),
+  ChatMessage(user: "Devil", message: "Nicht so gut, danke!"),
+  ChatMessage(user: "Angel", message: "Schön, das zu hören!"),
+  ChatMessage(user: "Devil", message: "Ja, nicht wahr?"),
+  ChatMessage(user: "Angel", message: "Ja, das ist es!"),
 ];
